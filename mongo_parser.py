@@ -1,4 +1,4 @@
-from Backend.PovarenokParser.food_list import RecipePage, MainPage
+from Parser.PovarenokParser.food_list import RecipePage, MainPage
 from mongodb.mongo import MongoDB
 from img_generator import Text2ImageAPI
 import base64
