@@ -6,8 +6,7 @@ import re
 
 
 def generate_img(name: str, ingr: list) -> bytes:
-    prompt = f"4k, hires, cinematic, Блюдо: '{name}' суперреализм на тарелке крупным планом. " \
-             f"Ингредиенты: '{','.join(ingr)}'"
+    prompt = f"4k, hires, cinematic, Суперреалистичное изображение блюда: '{name}' крупным планом на тарелке. Ингредиенты блюда: '{ingr}', размытый задний план."
     uuid = api.generate(prompt, model_id)
     images = api.check_generation(uuid)
     return base64.b64decode(images[0])
